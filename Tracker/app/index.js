@@ -26,7 +26,7 @@ RNApp.propTypes = {
 };
 
 export default createContainer(() => {
-  console.log('ssssssssssss');
+  console.log(settings.METEOR_URL);
   return {
     status: Meteor.status(),
     user: Meteor.user(),
