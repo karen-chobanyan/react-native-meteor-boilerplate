@@ -33,17 +33,17 @@ const styles = StyleSheet.create({
   },
 });
 
-const Details = ({ detailsReady, details }) => {
-  if (!detailsReady) {
+const Projects = ({ projectsReady, projects }) => {
+  if (!projectsReady) {
     return <Loading />;
   }
 
   return (
     <View style={styles.container}>
       <ScrollView>
-        {details.map((detail) => (
-          <View style={styles.item} key={detail._id}>
-            <Text style={styles.itemText}>{detail.name}</Text>
+        {projects.map((project) => (
+          <View style={styles.item} key={project._id}>
+            <Text style={styles.itemText}>{project.name}</Text>
           </View>
         ))}
       </ScrollView>
@@ -51,16 +51,16 @@ const Details = ({ detailsReady, details }) => {
   );
 };
 
-Details.propTypes = {
-  detailsReady: PropTypes.bool,
-  details: PropTypes.array,
+Projects.propTypes = {
+  projectsReady: PropTypes.bool,
+  projects: PropTypes.array,
 };
 
 export default createContainer(() => {
-  const handle = Meteor.subscribe('details-list');
-
+  const handle = Meteor.subscribe('projects-list');
+  console.log(handle);
   return {
-    detailsReady: handle.ready(),
-    details: Meteor.collection('details').find() || [],
+    projectsReady: handle.ready(),
+    projects: Meteor.collection('projects').find() || [],
   };
-}, Details);
+}, Projects);

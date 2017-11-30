@@ -4,7 +4,7 @@ import { Image } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
 import Home from '../screens/Home';
-import Details from '../screens/Details';
+import Projects from '../screens/Projects';
 import Profile from '../screens/Profile';
 import SignIn from '../screens/SignIn';
 
@@ -26,10 +26,10 @@ export const HomeStack = StackNavigator({
       headerTitle: 'Home',
     },
   },
-  Details: {
-    screen: Details,
+  Projects: {
+    screen: Projects,
     navigationOptions: {
-      headerTitle: 'Details',
+      headerTitle: 'Projects',
     },
   },
 });

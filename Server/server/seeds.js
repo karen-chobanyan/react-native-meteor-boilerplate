@@ -1,10 +1,10 @@
-import Details from '/lib/collections/details';
+import Projects from '/lib/collections/projects';
 
 const seed = () => {
-  if (Details.find().count() === 0) {
+  if (Projects.find().count() === 0) {
     for (let i = 0; i < 10; i++) {
-      Details.insert({
-        name: `Detail #${i}`
+      Projects.insert({
+        name: `Project #${i}`
       });
     }
   }

@@ -1,5 +1,5 @@
-import Details from './details';
+import Projects from './projects';
 
 export {
-  Details
+  Projects
 };

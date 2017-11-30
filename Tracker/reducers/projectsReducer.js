@@ -4,7 +4,7 @@ const initialState = {
   error: false
 }
 
-export default function projectReducer(satte = initialState, action){
+export default function projectReducer(state = initialState, action){
   switch (action.type) {
     case 'FETCHING_PROJECTS':{
       return {

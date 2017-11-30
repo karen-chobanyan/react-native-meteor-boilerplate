@@ -1,5 +1,5 @@
-import details from './details';
+import projects from './projects';
 
 export default function (){
-  details();
+  projects();
 }

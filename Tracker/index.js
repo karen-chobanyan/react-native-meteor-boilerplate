@@ -14,5 +14,4 @@ const tracker = () => {
   )
 }
 
-
 AppRegistry.registerComponent('Tracker', () => tracker);

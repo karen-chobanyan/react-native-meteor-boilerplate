@@ -21,15 +21,14 @@ const styles = StyleSheet.create({
 });
 
 const Home = (props) => {
-  console.log('aaaaaaaa');
   return (
     <View style={styles.container}>
       <Text style={styles.main}>
         Home
       </Text>
       <Button
-        text="Details"
-        onPress={() => props.navigation.navigate('Details')}
+        text="Projects"
+        onPress={() => props.navigation.navigate('Projects')}
       />
     </View>
   );
