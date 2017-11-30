@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Meteor, { createContainer } from 'react-native-meteor';
-
-import { AuthStack, Tabs } from './config/routes';
-import Loading from './components/Loading';
-import settings from './config/settings';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Meteor, { createContainer } from 'react-native-meteor'
+import { AuthStack, Tabs } from './config/routes'
+import Loading from './components/Loading'
+import settings from './config/settings'
+import { connect } from 'react-redux'
 
 Meteor.connect(settings.METEOR_URL);
 
