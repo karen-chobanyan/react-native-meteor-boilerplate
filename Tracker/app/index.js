@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Meteor, { createContainer } from 'react-native-meteor'
-import { AuthStack, Tabs } from './config/routes'
+import { AuthStack, HomeStack } from './config/routes'
 import Loading from './components/Loading'
 import settings from './config/settings'
 import { connect } from 'react-redux'
@@ -14,7 +14,7 @@ const RNApp = (props) => {
   if (status.connected === false || loggingIn) {
     return <Loading />;
   } else if (user !== null) {
-    return <Tabs />;
+    return <HomeStack />;
   }
   return <AuthStack />;
 };

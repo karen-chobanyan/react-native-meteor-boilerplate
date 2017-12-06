@@ -5,6 +5,7 @@ import { StackNavigator, TabNavigator } from 'react-navigation';
 
 import Home from '../screens/Home';
 import Projects from '../screens/Projects';
+import Project from '../screens/Project';
 import Profile from '../screens/Profile';
 import SignIn from '../screens/SignIn';
 
@@ -20,18 +21,20 @@ export const AuthStack = StackNavigator({
 });
 
 export const HomeStack = StackNavigator({
-  Home: {
-    screen: Home,
-    navigationOptions: {
-      headerTitle: 'Home',
-    },
-  },
+  // Home: {
+  //   screen: Home,
+  //   navigationOptions: {
+  //     headerTitle: 'Home',
+  //   },
+  // },
   Projects: {
     screen: Projects,
-    navigationOptions: {
-      headerTitle: 'Projects',
-    },
   },
+  Project: {
+    screen: Project
+  },
+}, {
+  headerMode: 'none',
 });
 
 export const ProfileStack = StackNavigator({
@@ -49,29 +52,29 @@ const styles = {
   },
 };
 
-export const Tabs = TabNavigator({
-  Home: {
-    screen: HomeStack,
-    navigationOptions: {
-      tabBarLabel: 'Home',
-      tabBarIcon: ({ tintColor }) => (
-        <Image
-          style={[styles.icon, { tintColor }]}
-          source={homeIcon}
-        />
-      ),
-    },
-  },
-  Profile: {
-    screen: ProfileStack,
-    navigationOptions: {
-      tabBarLabel: 'Profile',
-      tabBarIcon: ({ tintColor }) => (
-        <Image
-          style={[styles.icon, { tintColor }]}
-          source={profileIcon}
-        />
-      ),
-    },
-  },
-});
+// export const Tabs = TabNavigator({
+//   Home: {
+//     screen: HomeStack,
+//     navigationOptions: {
+//       tabBarLabel: 'Home',
+//       tabBarIcon: ({ tintColor }) => (
+//         <Image
+//           style={[styles.icon, { tintColor }]}
+//           source={homeIcon}
+//         />
+//       ),
+//     },
+//   },
+//   Profile: {
+//     screen: ProfileStack,
+//     navigationOptions: {
+//       tabBarLabel: 'Profile',
+//       tabBarIcon: ({ tintColor }) => (
+//         <Image
+//           style={[styles.icon, { tintColor }]}
+//           source={profileIcon}
+//         />
+//       ),
+//     },
+//   },
+// });

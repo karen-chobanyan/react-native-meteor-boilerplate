@@ -31,6 +31,6 @@ export default function projectReducer(state = initialState, action){
       break
     }        
     default:
-    return initialState
+    return state
   }
 }
